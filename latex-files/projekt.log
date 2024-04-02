@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.19)  27 MAR 2024 21:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.19)  2 APR 2024 19:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -163,22 +163,28 @@ LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <10> on input line 11.
 LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <7> on input line 11.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <12> on input line 19.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <8> on input line 19.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <6> on input line 19.
  [1
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plrm.enc}] (./projekt.aux) ) 
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plms.enc}] (./projekt.aux) ) 
 Here is how much of TeX's memory you used:
- 1302 strings out of 476025
- 22097 string characters out of 5790016
- 1850388 words of memory out of 5000000
- 21789 multiletter control sequences out of 15000+600000
- 517273 words of font info for 45 fonts, out of 8000000 for 9000
+ 1328 strings out of 476025
+ 22398 string characters out of 5790016
+ 1856388 words of memory out of 5000000
+ 21805 multiletter control sequences out of 15000+600000
+ 522084 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,62p,229b,216s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plr17.pfb>
-Output written on projekt.pdf (1 page, 17010 bytes).
+ 57i,6n,62p,522b,216s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on projekt.pdf (1 page, 42079 bytes).
 PDF statistics:
- 19 PDF objects out of 1000 (max. 8388607)
- 11 compressed objects within 1 object stream
+ 36 PDF objects out of 1000 (max. 8388607)
+ 22 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
