@@ -9,7 +9,19 @@
 
 \begin{document}
 \maketitle
-
+\section{Co?}
+System zajmuje się obsługą Bezzałogowego statku powietrznego (w skócie - BSP, pot. dron) **tutaj mozna wrzucic to do slownika**, odpowiada za umożliwienie lotu oraz sterowania zewnętrznego. Osoba kontrolująca obiekt będzie mieć możliwość podglądu do widoku z pokładu na bieżąco oraz wykonywania fotografii. BPS powinnien zapisywać lokalizacje miejsca startowego i w wypadku ewentualnej awarii lub stracenia połaczenia z modułem sterującym powracać do zapamietanej lokalizacji. Kontroler, będzie dawał możliwość poruszania sie w 3 ośiach, zdalnej obserwacji oraz wykonywania fotografii z pokładu. Osoba niewykwalifkiowana powinna mieć możliwość wykonanai kalibracji.
+\section{Jak?}
+\begin{enumerate}
+    \item Łączność modułu sterującego z BSP: wyposażenie drona w moduł Wi-Fi, łączenie się poprzez aplikacje mobilną i podłączenie urządzenia mobilnego do dedykowanego kontrolera
+    \item Sterowanie Lotem: Funkcja sterowania lotem jest realizowana poprzez system stabilizacji lotu, który wykorzystuje algorytmy kontroli lotu i czujniki inercyjne, zapewniając płynne i precyzyjne manewry BSP.
+    \item Wizualizacja na Żywo: System umożliwia wizualizację na żywo poprzez transmisję obrazu z kamery zainstalowanej na pokładzie drona do interfejsu użytkownika w aplikacji.
+    \item Wykonywanie Fotografii: Funkcja wykonywania fotografii jest realizowana poprzez sterowanie zintegrowanym aparatem lub kamerą na pokładzie drona za pomocą odpowiednich poleceń wysyłanych z kontrolera użytkownika, dwa przyciski na kontrolerze z lampka kontrolną.
+    \item Zapisywanie Lokalizacji Startowej: BSP zapisuje lokalizację miejsca startowego poprzez wykorzystanie systemów GPS oraz pamięci wewnętrznej, co pozwala na szybkie odnalezienie punktu startowego w przypadku konieczności powrotu.
+    \item Automatyczne Powracanie do Lokalizacji Startowej: Funkcja automatycznego powracania do lokalizacji startowej jest realizowana poprzez algorytmy nawigacyjne, które wykorzystują zapisaną lokalizację startową i sterują BSP w kierunku tego punktu w przypadku utraty połączenia z kontrolerem.
+    \item Sterowanie: Kontroler BSP umożliwia sterowanie w trzech osiach poprzez odpowiednie manipulowanie dwoma drążkami (jeden w osiach x i z, drugi w osi y), które przekazują sygnały sterujące do odpowiednich silników i powierzchni sterowych drona.
+    \item Kalibracja dla Osób Niewykwalifikowanych: intuicyjna procedura kalibracji z instrukcją krok po kroku. Diody kontrolne na kazdym ramieniu z silnikiem, pomagające w kalibracji oraz zapewniające lepszą widoczność BSP.
+\end{enumerate}
 \section{Gdzie system jest wykorzystywany. (GDZIE)}
 Korzystać z systemu można w obszarach zamkniętych jak i otwartych. Między innymi: obszary zurbanizowane, terenty wiejskie, obszary leśne oraz górskie. Urządzenie nie nadaje się do korzystania w wodzie. 
 
