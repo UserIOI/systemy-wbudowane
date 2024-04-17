@@ -4,40 +4,302 @@
 
 
 \title{Systemy wbudowane\\ Projekt drona}
-\author{Paweł Grzegorzewski, Jan Nawrat, Paweł Haraburda}
+\author{Paweł Grzegorzewski, Paweł Haraburda,  Jan Nawrat}
 \date{}
 
 \begin{document}
 \maketitle
-\section{Co?}
-System zajmuje się obsługą Bezzałogowego statku powietrznego (w skócie - BSP, pot. dron) **tutaj mozna wrzucic to do slownika**, odpowiada za umożliwienie lotu oraz sterowania zewnętrznego. Osoba kontrolująca obiekt będzie mieć możliwość podglądu do widoku z pokładu na bieżąco oraz wykonywania fotografii. BPS powinnien zapisywać lokalizacje miejsca startowego i w wypadku ewentualnej awarii lub stracenia połaczenia z modułem sterującym powracać do zapamietanej lokalizacji. Kontroler, będzie dawał możliwość poruszania sie w 3 ośiach, zdalnej obserwacji oraz wykonywania fotografii z pokładu. Osoba niewykwalifkiowana powinna mieć możliwość wykonanai kalibracji.
-\section{Jak?}
+
+\section{Słownik pojęć}
+
+W dokumentacji używane będą następujące pojęcia:
+
+\begin{itemize}
+    \item BSP $ - $ bezzałogowy statek powietrzny (ang. \textit{unmanned aerial vehicle, skr. UAV}), statek powietrzny bez możliwości zabierania pasażerów, w tym przypadku pilotowany zdalnie
+    \item dron $ - $ inaczej BSP
+    \item kontroler $ - $ niewielkie urządzenie umożliwiające sterowanie BSP na odległość poprzez RC, używające urządzenia z systemem Android lub iOS jako wyświetlacza
+    \item RC $ - $ Radio Control, zdalne sterowanie realizowane drogą radiową
+\end{itemize}
+
+\section{Jakie są założenia projektu (CO)}
+System zajmuje się obsługą BSP z kamerą na pokładzie, odpowiada za umożliwienie lotu oraz sterowania zewnętrzengo. Sterowanie dronem będzie odbywało się z użyciem kontrolera. Użytkownik będzie miał możliwość sterowania lotem w trzech osiach oraz zapisywania fotografii. Opcjonalnie do kontrolera będzie można podłączyć urządzenie mobilne z systemem Android lub iOS i uzyskać dostęp do poglądu z kamery pokładowej na żywo. W przypadku awarii lub utraty połączenia z kontrolerem dron podejmie próbę powrotu do miejsca startu. Wstępna kalibracja BSP będzie możliwa do wykonania przez użytkownika bez kwalifikacji ani wcześniejszego doświadczenia.
+
+\section{W jaki sposób założenia zostaną zrealizowane (JAK)}
 \begin{enumerate}
-    \item Łączność modułu sterującego z BSP: wyposażenie drona w moduł Wi-Fi, łączenie się poprzez aplikacje mobilną i podłączenie urządzenia mobilnego do dedykowanego kontrolera
-    \item Sterowanie Lotem: Funkcja sterowania lotem jest realizowana poprzez system stabilizacji lotu, który wykorzystuje algorytmy kontroli lotu i czujniki inercyjne, zapewniając płynne i precyzyjne manewry BSP.
-    \item Wizualizacja na Żywo: System umożliwia wizualizację na żywo poprzez transmisję obrazu z kamery zainstalowanej na pokładzie drona do interfejsu użytkownika w aplikacji.
-    \item Wykonywanie Fotografii: Funkcja wykonywania fotografii jest realizowana poprzez sterowanie zintegrowanym aparatem lub kamerą na pokładzie drona za pomocą odpowiednich poleceń wysyłanych z kontrolera użytkownika, dwa przyciski na kontrolerze z lampka kontrolną.
-    \item Zapisywanie Lokalizacji Startowej: BSP zapisuje lokalizację miejsca startowego poprzez wykorzystanie systemów GPS oraz pamięci wewnętrznej, co pozwala na szybkie odnalezienie punktu startowego w przypadku konieczności powrotu.
-    \item Automatyczne Powracanie do Lokalizacji Startowej: Funkcja automatycznego powracania do lokalizacji startowej jest realizowana poprzez algorytmy nawigacyjne, które wykorzystują zapisaną lokalizację startową i sterują BSP w kierunku tego punktu w przypadku utraty połączenia z kontrolerem.
-    \item Sterowanie: Kontroler BSP umożliwia sterowanie w trzech osiach poprzez odpowiednie manipulowanie dwoma drążkami (jeden w osiach x i z, drugi w osi y), które przekazują sygnały sterujące do odpowiednich silników i powierzchni sterowych drona.
-    \item Kalibracja dla Osób Niewykwalifikowanych: intuicyjna procedura kalibracji z instrukcją krok po kroku. Diody kontrolne na kazdym ramieniu z silnikiem, pomagające w kalibracji oraz zapewniające lepszą widoczność BSP.
+    \item Łączność modułu sterującego z BSP $ - $ dron zostanie wyposażony w moduł RC, za pomocą którego będzie łączył się z kontrolerem. Poprzez użycie połączenia USB z kontrolerem i dedykowanej aplikacji obraz z kamery na pokładzie będzie mógł być odbierany i wyświetlany na urządzeniu mobilnym.
+    \item Sterowanie $ - $ kontroler będzie umożliwiał sterowanie BSP w trzech osiach poprzez odpowiednie manipulowanie dwoma drążkami (jeden w osiach x i z, drugi w osi y). Ruchy te będą odpowiednio interpretowane poprzez oprogramowanie na pokładzie drona i wysyłane będą sygnały sterujące do odpowiednich silników i powierzchni sterowych drona.
+    \item Wspomaganie lotu $ - $ dron będzie wyposażony w system stabilizacji lotu, który wykorzystuje algorytmy kontroli lotu i czujniki inercyjne, zapewniając płynne i precyzyjne manewry.
+    \item Podgląd na żywo $ - $ system będzie umożliwiał transmisję obrazu z kamery zainstalowanej na pokładzie drona do dedykowanej aplikacji  w czasie rzeczywistym.
+    \item Wykonywanie fotografii $ - $ możliwe będzie wykonanie fotografii zintegrowaną kamerą na pokładzie drona. Kontroler będzie wyposażony w dwa przyciski oraz lampkę kontrolną przeznaczone do obsługi tej funkcji.
+    \item Zapisywanie lokalizacji startowej $ - $ BSP będzie zapisywał lokalizację miejsca startowego w pamięci wewnętrznej poprzez wykorzystanie systeu GPS, co pozwali na szybkie odnalezienie punktu startowego w przypadku konieczności powrotu.
+    \item Automatyczne powracanie do lokalizacji startowej $ - $ w przypadku utracenia połączenia z kontrolerem BSP automatycznie powróci do miejsca startowego wykorzystując odpowiednie algorytmy nawigacyjne i zapisaną lokalizację startową.
+    \item Kalibracja przez użytkownika $ - $ procedura kalibracji BSP będzie intuicyjna i będzie możliwa do przeprowadzenia przez użytkownika bez żadnych kwalifikacji. Razem z dronem dostarczana będzie instrukcja kalibracji "krok po kroku".
+    \item Diody kontrolne - każde ramię z silnikiem zostanie wyposażone w diodę kontrolną. Diody te będą ułatwiały proces kalibracji, a podczas lotu będą zwiększały widoczność BSP
 \end{enumerate}
-\section{Gdzie system jest wykorzystywany. (GDZIE)}
+\section{Gdzie system jest wykorzystywany (GDZIE)}
 Korzystać z systemu można w obszarach zamkniętych jak i otwartych. Między innymi: obszary zurbanizowane, terenty wiejskie, obszary leśne oraz górskie. Urządzenie nie nadaje się do korzystania w wodzie. 
 
 \subsection{Ograniczenia systemu.}
 Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak: 
 \begin{itemize}
     \item Pogoda $-$ przy dużym wietrze mogą wystąpić problemy ze sterownością, przy wzmożonym deszczu może dojść do zwarć w systemie, bądź w momencie burz do uderzenia piorunem. W sytuacji dużego zachmurzenia lub mgły obraz z kamery może być niewyraźny oraz jest możliwe utrata widoczności drona. Korzystając z urządzenia w niższuch temperaturach prawdopodobne jest szybsze wyczerpanie akumulatora. 
-    \item Wysokość $-$ w momencie osiągania większych wysokości dron stanowi poważniejsze zagrożenie w momencie awarii systemu. Trzeba też brać pod uwagę możliwe kolizje z innymi statkami powietrznymi (innymi dronami, samolotami).
-    \item Zasięg $-$ dron posiada ograniczony zasięg latania spowodowanym utratą sygnału z kontrolerem na dalszych odległościach.
+    \item Wysokość $-$ w momencie osiągania większych wysokości dron stanowi poważniejsze zagrożenie w momencie awarii systemu. Trzeba też brać pod uwagę możliwe kolizje z innymi statkami powietrznymi (innymi dronami, samolotami, helikopterami).
+    \item Zasięg $-$ dron posiada ograniczony zasięg latania spowodowany utratą sygnału z kontrolerem na dalszych odległościach.
     \item Prawne $-$ każde państwo posiada własne regulacje prawne dotyczące latania dronami oraz innymi bezzałogowymi statkami powietrznymi takie jak limit wysokości latania, brak możliwości latania w miastach bądź nad tłumami.
 \end{itemize}
 
-\section{Dla kogo system jest skierowany. (KTO)}
+\section{Dla kogo system jest przeznaczony (KTO)}
 \begin{itemize}
     \item Serwisant $-$ naprawa urządzenia, wymiana części, testowanie działania systemu.
     \item Użytkownik $-$ rekreacyjne/ekstremalne latanie dronem, robienie zdjęć/filmów, kalibracja oraz ładowanie urządzenia, podgląd z kamery urządzenia na telefonie za pomocą dedykowanej aplikacji.  
 \end{itemize}
+
+
+
+\section{Przypadki uzycia}
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Nazwa PU:} Wyciągnięcie karty pamięci SD & \textbf{Numer PU:} 10 & \textbf{Priorytet:} niski \\
+\hline
+\textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Użytkownik, dron w celu przekazania karty z drona do użytkownika}\\
+\hline
+\textbf{Wyzwalacz: } wciśniecie płytki zawierającej karte SD & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+\hline
+\multicolumn{3}{|c|}{
+    \textbf{Powiązania:} brak
+}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item wciśnięcie płytki zawierającej karte SD
+        \item odskoczenie płytki
+        \item usunięcie możliwości zapisu na karte SD w tym fotografowanie
+        \item wsunięcie płytki spowrotem (poprzez użytkownika)
+        \item jeśli wykryto karte to przwrócenie możliwości zapisu na karte SD
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item wciśnięcie płytki zawierającej karte SD
+        \item nie odskoczenie płytki
+        \item dostęp do karty SD poprzeze rozkręcenie drona
+        \item usunięcie możliwości zapisu na karte SD w tym fotografowanie
+        \item skręcenie drona spowrotem (poprzez użytkownika)
+        \item jeśli wykryto karte to przwrócenie możliwości zapisu na karte SD
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\end{tabular}
+\caption{Przypadki użycia dla wyciągnięcia karty pamięci SD}
+\label{tab:tabela_pu}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Nazwa PU:} Kalibracja drona & \textbf{Numer PU:} 11 & \textbf{Priorytet:} średni \\
+\hline
+\textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Użytkownik, dron}\\
+\hline
+\textbf{Wyzwalacz: Wciśnięcie przycisku służacego do kalibracji na dronie} & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+\hline
+\textbf{Powiązania:} brak\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item wciśnięcie przycisku rozpoczynającego kalibracje trzymając go prosto, poziomo
+        \item zaświecenie się lampki kontrolnej na zielono
+        \item obrócenie drona względem osi $z$ o $90\%$
+        \item zaświecenie się lampki kontrolnej na zielono
+        \item obrócenie drona względem osi $z$ o $90\%$
+        \item zaświecenie się lampki kontrolnej na zielono
+        \item obrócenie drona względem osi $z$ o $90\%$
+        \item zaświecenie się lampki kontrolnej na zielono
+        \item obrócenie drona względem osi $z$ o $90\%$
+        \item zaświecenie się lampki kontrolnej na zielono
+        \item powrót do punktu 3 tym razem względem osi $x$, kontynuacja do punktu 10, po czym powtórzenie względem osi $y$
+        \item zakończenie kalibracji
+        \item testowanie lotu poprzez użytkownika, jeśli efekt nie zadowalający powrót do punktu pierwszego \newline
+        
+    \end{enumerate}
+\end{minipage}}
+\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item wciśnięcie przycisku rozpoczynającego kalibracje        
+        \item nieudana kalibracja
+        \item zaświecenie się kontrolek na czerwono
+        \item wyłączenie trybu kalibracji
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\end{tabular}
+\caption{Przypadki użycia dla wyciągnięcia karty pamięci SD}
+\label{tab:tabela_pu}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Nazwa PU: }Ładowanie akumulatorów drona  & \textbf{Numer PU:} 14 & \textbf{Priorytet:} średni \\
+\hline
+\textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Użytkownik, dron w celu naładowania akumulatorów drona}\\
+\hline
+\textbf{Wyzwalacz: } podpięcie kabla USB-C (podłączonego do zasilania) do drona & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+\hline
+\multicolumn{3}{|c|}{
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{itemize}
+    \item \textbf{Powiązania:} brak
+    \item \textbf{Asocjacja:} brak
+    \item \textbf{Zawieranie:} brak
+    \item \textbf{Rozszerzenie:} brak
+    \item \textbf{Generalizacja:} brak
+    \end{itemize}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item podpięcie kabla USB-C (podłączonego do zasilania) do drona
+        \item rozpoczęcie procesu ładowania akumulatorów
+        \item osięgniecie maskymalnej pojemnośći akumulatorów
+        \item wyciągneicie kabla zasilającego
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy poboczne:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item podpięcie kabla USB-C (podłączonego do zasilania) do drona
+        \item rozpoczęcie procesu ładowania akumulatorów
+        \item wyciągneicie kabla zasilającego
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:} brak}\\
+\hline
+\end{tabular}
+\caption{Przypadki użycia dla ładowania drona }
+\label{tab:tabela_pu}
+\end{table}
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Nazwa PU: }Ładowanie akumulatorów kontrolera  & \textbf{Numer PU:} 15 & \textbf{Priorytet:} średni \\
+\hline
+\textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Użytkownik, kontroler w celu naładowania akumulatorów kontrolera}\\
+\hline
+\textbf{Wyzwalacz: } podpięcie kabla USB-C (podłączonego do zasilania) do kontrolera & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+\hline
+\multicolumn{3}{|c|}{
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{itemize}
+    \item \textbf{Powiązania:} brak
+    \item \textbf{Asocjacja:} brak
+    \item \textbf{Zawieranie:} brak
+    \item \textbf{Rozszerzenie:} brak
+    \item \textbf{Generalizacja:} brak
+    \end{itemize}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item podpięcie kabla USB-C (podłączonego do zasilania) do kontrolera
+        \item rozpoczęcie procesu ładowania akumulatorów
+        \item osięgniecie maskymalnej pojemnośći akumulatorów
+        \item wyciągneicie kabla zasilającego
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy poboczne:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item podpięcie kabla USB-C (podłączonego do zasilania) do kontrolera
+        \item rozpoczęcie procesu ładowania akumulatorów
+        \item wyciągneicie kabla zasilającego
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:} brak}\\
+\hline
+\end{tabular}
+\caption{Przypadki użycia dla ładowania kontrolera }
+\label{tab:tabela_pu}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Nazwa PU: }Wysyłanie obrazu z kamery na żywo  & \textbf{Numer PU:} 16 & \textbf{Priorytet:} średni \\
+\hline
+\textbf{Aktor podstawowy:} dron & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} dron oraz kontroler z podłaczonym telefonem w celu udostępnienia możliwości poglądu widoku z drona na żywo}\\
+\hline
+\textbf{Wyzwalacz: } uruchomienie drona & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+\hline
+\multicolumn{3}{|c|}{
+\textbf{Powiązania:} brak}
+\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item włączenie drona
+        \item rozpoczęcie wysyłania wideo
+        \item odbiór wideo poprzez drona
+        \item wyświetlanie wideo na dronie
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy poboczne:} brak}
+\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:} brak}\\
+\hline
+\end{tabular}
+\caption{Przypadki użycia dla przesyłania obrazu na żywo }
+\label{tab:tabela_pu}
+\end{table}
 
 \end{document}

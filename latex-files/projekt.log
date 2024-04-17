@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.19)  2 APR 2024 19:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.19)  17 APR 2024 10:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -91,7 +91,20 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count196
 \l__pdf_internal_box=\box51
-) (./projekt.aux)
+) (./projekt.aux
+
+LaTeX Warning: Label `tab:tabela_pu' multiply defined.
+
+
+LaTeX Warning: Label `tab:tabela_pu' multiply defined.
+
+
+LaTeX Warning: Label `tab:tabela_pu' multiply defined.
+
+
+LaTeX Warning: Label `tab:tabela_pu' multiply defined.
+
+)
 \openout1 = `projekt.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -164,27 +177,163 @@ LaTeX Font Info:    External font `plex10' loaded for size
 LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <7> on input line 11.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 19.
+(Font)              <12> on input line 18.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 19.
+(Font)              <8> on input line 18.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 19.
+(Font)              <6> on input line 18.
  [1
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plms.enc}] (./projekt.aux) ) 
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plit.enc}] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
+ []
+
+
+Underfull \hbox (badness 4316) in paragraph at lines 70--70
+[]\OT4/cmr/bx/n/12 Wyzwalacz:  \OT4/cmr/m/n/12 wci-±nie-cie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
+
+ []
+
+
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 62--104
+ [][] 
+ []
+
+
+Underfull \hbox (badness 8132) in paragraph at lines 113--113
+[]\OT4/cmr/bx/n/12 Nazwa PU: \OT4/cmr/m/n/12 Ka-li-bra-cja
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--115
+[]\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
+ []
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 119--119
+[]\OT4/cmr/bx/n/12 Wyzwalacz: Wci-±ni¦-cie
+ []
+
+
+Underfull \hbox (badness 5064) in paragraph at lines 141--141
+[]\OT4/cmr/m/n/12 wci±ni¦cie przy-ci-sku roz-po-czy-na-j¡-ce-go ka-li-bra-cje
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+
+ []
+
+
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 111--158
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 4940) in paragraph at lines 167--167
+[]\OT4/cmr/bx/n/12 Nazwa PU: \OT4/cmr/m/n/12 Ša-do-wa-nie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--169
+[]\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 173--173
+\OT4/cmr/m/n/12 bla USB-C (pod-ª¡-czo-ne-go
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--195
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--205
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 4940) in paragraph at lines 220--220
+[]\OT4/cmr/bx/n/12 Nazwa PU: \OT4/cmr/m/n/12 Ša-do-wa-nie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--222
+[]\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 226--226
+\OT4/cmr/m/n/12 bla USB-C (pod-ª¡-czo-ne-go
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--248
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--258
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--293
+
+ []
+
+
+Overfull \hbox (197.83568pt too wide) in paragraph at lines 270--301
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3] [4{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plmi.enc}] [5] [6] [7] (./projekt.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1328 strings out of 476025
- 22398 string characters out of 5790016
- 1856388 words of memory out of 5000000
- 21805 multiletter control sequences out of 15000+600000
- 522084 words of font info for 57 fonts, out of 8000000 for 9000
+ 1334 strings out of 476025
+ 22465 string characters out of 5790016
+ 1876388 words of memory out of 5000000
+ 21808 multiletter control sequences out of 15000+600000
+ 523126 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,62p,522b,216s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on projekt.pdf (1 page, 42079 bytes).
+ 57i,11n,62p,781b,380s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on projekt.pdf (7 pages, 72389 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
- 22 compressed objects within 1 object stream
+ 68 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
