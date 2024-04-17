@@ -57,6 +57,259 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 
 
 \section{Przypadki uzycia}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+    \hline
+    \textbf{Nazwa PU:} Włączenie drona & \textbf{Numer PU:} 1 & \textbf{Priorytet:} wysoki \\
+    \hline
+    \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy}  \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Użytkownik, potrzeba przełączenia switcha z off na on na dronie}\\
+    \hline
+    \textbf{Wyzwalacz: } Przełączenie switcha z off na on w dronie & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+    \hline
+    \multicolumn{3}{|c|}{
+        \textbf{Powiązania:} brak
+    }\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Przesunięcię switcha z pozycji 'off' na pozycje 'on'
+            \item Uruchomienie drona, pojawienie się kontrolki na dronie świadczącej o włączeniu
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Przesunięcię switcha z pozycji 'off' na pozycje 'on'
+            \item Nie włączenie się drona, spowodowane uszkodzeniem akumulatorów bądź brakiem ich naładowania 
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \end{tabular}
+    \caption{Przypadki użycia dla włączenia drona}
+    \label{tab:tabela_pu}
+    \end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+    \hline
+    \textbf{Nazwa PU:} Wyłączenie drona & \textbf{Numer PU:} 2 & \textbf{Priorytet:} wysoki \\
+    \hline
+    \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy}  \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Użytkownik, potrzeba przełączenia switcha z on na off na dronie}\\
+    \hline
+    \textbf{Wyzwalacz: } Przełączenie switcha z on na off w dronie & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+    \hline
+    \multicolumn{3}{|c|}{
+        \textbf{Powiązania:} brak
+    }\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Przesunięcię switcha z pozycji 'on' na pozycje 'off'
+            \item Wyłączenie drona, zniknięcie kontrolki na dronie świadczącej o włączeniu
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Przesunięcię switcha z pozycji 'on' na pozycje 'off'
+            \item Nie wyłączenie się drona, spowodowane uszkodzeniem systemu 
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \end{tabular}
+    \caption{Przypadki użycia dla wyłączenia drona}
+    \label{tab:tabela_pu}
+    \end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+    \hline
+    \textbf{Nazwa PU:} Włączenie kontrolera & \textbf{Numer PU:} 3 & \textbf{Priorytet:} wysoki \\
+    \hline
+    \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy}  \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Użytkownik, potrzeba przełączenia switcha z off na on na kontrolerze}\\
+    \hline
+    \textbf{Wyzwalacz: } Przełączenie switcha z 'off' na 'on' na kontrolerze & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+    \hline
+    \multicolumn{3}{|c|}{
+        \textbf{Powiązania:} brak
+    }\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Przesunięcię switcha z pozycji 'off' na pozycje 'on'
+            \item Uruchomienie kontrolera, pojawienie się kontrolki na kontrolerze świadczącej o włączeniu
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Przesunięcię switcha z pozycji 'off' na pozycje 'on'
+            \item Nie włączenie się kontrolera, spowodowane uszkodzeniem akumulatorów bądź brakiem ich naładowania 
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \end{tabular}
+    \caption{Przypadki użycia dla włączenia kontrolera}
+    \label{tab:tabela_pu}
+    \end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+    \hline
+    \textbf{Nazwa PU:} Wyłączenie kontrolera & \textbf{Numer PU:} 4 & \textbf{Priorytet:} wysoki \\
+    \hline
+    \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy}  \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Użytkownik, potrzeba przełączenia switcha z 'off' na 'on' na kontrolerze}\\
+    \hline
+    \textbf{Wyzwalacz: } Przełączenie switcha z 'on' na 'off' na kontrolerze & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+    \hline
+    \multicolumn{3}{|c|}{
+        \textbf{Powiązania:} brak
+    }\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Przesunięcię switcha z pozycji 'on' na pozycje 'off'
+            \item Wyłączenie akumulatora
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Przesunięcię switcha z pozycji 'off' na pozycje 'on'
+            \item Nie wyłączenie się kontrolera, spowodowane uszkodzeniem systemu 
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \end{tabular}
+    \caption{Przypadki użycia dla wyłączenia kontrolera}
+    \label{tab:tabela_pu}
+    \end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+    \hline
+    \textbf{Nazwa PU:} Uruchomienie silników drona & \textbf{Numer PU:} 5 & \textbf{Priorytet:} wysoki \\
+    \hline
+    \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy}  \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Użytkownik, potrzeba naciśnięcia przycisku na kontrolerze}\\
+    \hline
+    \textbf{Wyzwalacz: } Przytrzymanie przycisku 'uruchom silniki' przez 3 sekundy & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+    \hline
+    \multicolumn{3}{|c|}{
+        \textbf{Powiązania:} Przesył kontroler - dron
+    }\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Przytrzymanie przycisku 'uruchomienie silników' przez 3 sekundy
+            \item Przesłanie sygnału z kontrolera do drona
+            \item Dron zapisuje lokalizacje GPS
+            \item Dron sprawdza czy możliwe jest włączenie silników
+            \item Dron uruchamia silniki
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Przytrzymanie przycisku 'uruchomienie silników' przez 3 sekundy
+            \item Dron nie uruchamia silników z powodu braku połączenia między kontrolerem a dronem
+            \item Dron nie uruchamia silników z powodu nie włączenia go 
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \end{tabular}
+    \caption{Przypadki użycia dla uruchomienia silników drona}
+    \label{tab:tabela_pu}
+    \end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+    \hline
+    \textbf{Nazwa PU:} Wyłączenie silników drona & \textbf{Numer PU:} 6 & \textbf{Priorytet:} wysoki \\
+    \hline
+    \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy}  \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Użytkownik, potrzeba naciśnięcia przycisku na kontrolerze}\\
+    \hline
+    \textbf{Wyzwalacz: } Przytrzymanie przycisku 'wyłącz silniki' przez 3 sekundy & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+    \hline
+    \multicolumn{3}{|c|}{
+        \textbf{Powiązania:} Przesył kontroler - dron
+
+    }\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Przytrzymanie przycisku 'wyłącz silnik' przez 3 sekundy
+            \item Przesłanie sygnału z kontrolera do drona
+            \item Dron wyłącza silniki
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Przytrzymanie przycisku 'wyłącz silniki' przez 3 sekundy
+            \item Dron nie wyłącza silników z powodu braku połączenia między kontrolerem a dronem
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \end{tabular}
+    \caption{Przypadki użycia dla wyłączenia silników drona}
+    \label{tab:tabela_pu}
+    \end{table}
+
 \begin{table}[h]
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
@@ -302,8 +555,6 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \label{tab:tabela_pu}
 \end{table}
 
-<<<<<<< HEAD
+
 \end{document}
-=======
-\end{document}
->>>>>>> 6ae7ecc2a4cc6b36d62cc70b19ebc43f3a67594b
+
