@@ -728,5 +728,402 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \end{table}
 
 
-\end{document}
 
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Nazwa PU: } Wykonanie ruchu  & \textbf{Numer PU:} 17 & \textbf{Priorytet:} wysoki \\
+\hline
+\textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} użytkownik, kontroler, dron}\\
+\hline
+\textbf{Wyzwalacz: } zmiana pozycji jednego lub więcej z drążków kontrolera & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+\hline
+\multicolumn{3}{|c|}{
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{itemize}
+    \item \textbf{Powiązania:} brak
+    \item \textbf{Asocjacja:} brak
+    \item \textbf{Zawieranie:} brak
+    \item \textbf{Rozszerzenie:} Wysłanie sygnału do drona
+    \item \textbf{Generalizacja:} brak
+    \end{itemize}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item kontroler zczytuje aktualne pozycje drążków
+        \item kontroler wysyła informację o wprowadzonym ruchu do drona
+        \item dron otrzymuje sygnał z informacją o ruchu
+        \item na podstawie inforamcji z sensorów na pokładzie dron ustala, czy ruch zakończy się kolizją
+        \item dron ustala jakie ustawienie silników poskutkuje wykonaniem ruchu po czym je wdraża
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy poboczne:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item[1a)] kontroler zczytuje aktualne pozycje drążków
+        \item[1b)] kontroler wysyła informację o wprowadzonym ruchu do drona
+        \item[1c)] dron otrzymuje sygnał z informacją o ruchu
+        \item[1d)] na podstawie inforamcji z sensorów na pokładzie dron ustala, czy ruch zakończy się kolizją
+        \item[1e)] dron nie wykonuje ruchu, ponieważ wykrył możliwość kolizji
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:} brak}\\
+\hline
+\end{tabular}
+\caption{Przypadek użycia: Wykonanie ruchu}
+\label{tab:tabela_pu}
+\end{table}
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Nazwa PU: } Lądowanie  & \textbf{Numer PU:} 18 & \textbf{Priorytet:} średni \\
+\hline
+\textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} użytkownik, kontroler, dron}\\
+\hline
+\textbf{Wyzwalacz: } wciśnięcie dedykowanego przycisku lądowania na kontrolerze & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+\hline
+\multicolumn{3}{|c|}{
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{itemize}
+    \item \textbf{Powiązania:} Wykonanie ruchu
+    \item \textbf{Asocjacja:} brak
+    \item \textbf{Zawieranie:} brak
+    \item \textbf{Rozszerzenie:} Wysłanie sygnału do drona
+    \item \textbf{Generalizacja:} brak
+    \end{itemize}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item kontroler wysyła sygnał do drona z informacją o rządaniu lądowania
+        \item dron otrzymuje sygnał
+        \item dron rozpoczyna manewr lądowania wspomagając się sensorami
+        \item dron kończy lądowanie gdy odczyta z sensorów, że znalazł się na podłożu
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy poboczne:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item[1a)] kontroler wysyła sygnał do drona z informacją o rządaniu lądowania
+        \item[1b)] dron otrzymuje sygnał
+        \item[1c)] dron rozpoczyna manewr lądowania wspomagając się sensorami
+        \item[1d)] użytkownik rozpoczął wykonywanie ruchu
+        \item[1e)] dron otrzymuje sygnał z rządaniem wykonaniu ruchu i porzuca operację lądowania
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item[1a)] kontroler wysyła sygnał do drona z informacją o rządaniu lądowania
+        \item[1b)] dron otrzymuje sygnał
+        \item[1c)] dron rozpoczyna manewr lądowania wspomagając się sensorami
+        \item[1d)] dron wykrywa nieprzewidzianą zmianę położenia
+        \item[1e)] dron stabilizuje się i porzuca wykonanie manewru lądowania
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\end{tabular}
+\caption{Przypadek użycia: Lądowanie}
+\label{tab:tabela_pu}
+\end{table}
+
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Nazwa PU: } Wysyłanie sygnału PING do drona & \textbf{Numer PU:} 19 & \textbf{Priorytet:} średni \\
+\hline
+\textbf{Aktor podstawowy:} kontroler & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} kontroler, dron}\\
+\hline
+\textbf{Wyzwalacz: } przerwanie przez wewnętrzny timer & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} wewnętrzny} \\
+\hline
+\multicolumn{3}{|c|}{
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{itemize}
+    \item \textbf{Powiązania:} Powrót do miejsca startu
+    \item \textbf{Asocjacja:} brak
+    \item \textbf{Zawieranie:} brak
+    \item \textbf{Rozszerzenie:} Wysłanie sygnału do drona
+    \item \textbf{Generalizacja:} brak
+    \end{itemize}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item kontroler wysyła sygnał do drona
+        \item dron odbiera sygnał i zapisuje nowy czas otrzymania ostatniego sygnału
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy poboczne:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item[1a)] kontroler wysyła sygnał do drona
+        \item[1b)] sygnał nie dociera
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}}\\
+\hline
+\end{tabular}
+\caption{Przypadek użycia: Wysyłanie sygnału PING do drona}
+\label{tab:tabela_pu}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Nazwa PU: } Powrót do miejsca startu  & \textbf{Numer PU:} 20 & \textbf{Priorytet:} średni \\
+\hline
+\textbf{Aktor podstawowy:} dron & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} kontroler(w przepływie pobocznym), dron}\\
+\hline
+\textbf{Wyzwalacz: } przerwanie związane z nieotrzymaniem sygnału PING od kontrolera & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} wewnętrzny} \\
+\hline
+\multicolumn{3}{|c|}{
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{itemize}
+    \item \textbf{Powiązania:} Wysłanie sygnału PING do drona
+    \item \textbf{Asocjacja:} Lądowanie
+    \item \textbf{Zawieranie:} brak
+    \item \textbf{Rozszerzenie:} Wysłanie sygnału do drona
+    \item \textbf{Generalizacja:} brak
+    \end{itemize}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item dron odczytuje z pamięci wewnętrznej miejsce włączenia silników
+        \item dron wznosi się na odpowiednią wysokość
+        \item dron odczytuje swoją aktualną lokalizację i kieruje się w miejsce startu
+        \item po dotarciu do miejsca startu dron rozpoczyna procedurę lądowania
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy poboczne:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item[1a)] w czasie wykonywania procedury powrotu dron ponownie nawiązuje sygnał z kontrolerem
+        \item[1b)] dron stabilizuje pozycję i przerywa procedurę powrotu
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item[1a)] dron odczytuje z pamięci wewnętrznej miejsce włączenia silników
+        \item[1b)] dron wznosi się na odpowiednią wysokość
+        \item[1c)] dron odczytuje swoją aktualną lokalizację i kieruje się w miejsce startu
+        \item[1d)] dron natrafia na przeszkodę i przerywa procedurę powrotu
+        \item[2a)] bateria osiąga bardzo niski poziom
+        \item[2b)] dron wykonuje procedurę lądowania 
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\end{tabular}
+\caption{Przypadek użycia: Powrót do miejsca startu}
+\label{tab:tabela_pu}
+\end{table}
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Nazwa PU: } Podłączenie telefonu do kontrolera  & \textbf{Numer PU:} 21 & \textbf{Priorytet:} niski \\
+\hline
+\textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} użytkownik, kontroler}\\
+\hline
+\textbf{Wyzwalacz: } nawiązanie połączenia USB z telefonem z systemem iOS lub Android & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+\hline
+\multicolumn{3}{|c|}{
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{itemize}
+    \item \textbf{Powiązania:} Wysyłanie wideo na żywo
+    \item \textbf{Asocjacja:} brak
+    \item \textbf{Zawieranie:} brak
+    \item \textbf{Rozszerzenie:} brak
+    \item \textbf{Generalizacja:} brak
+    \end{itemize}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item kontroler czeka na uruchomienie dedykowanej aplikacji
+        \item po włączeniu aplikacji obraz na żywo zaczyna być wyświetlany
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy poboczne:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item[1a)] kontroler czeka na uruchomienie dedykowanej aplikacji
+        \item[1b)] po włączeniu aplikacji obraz na żywo zaczyna być wyświetlany
+        \item[1c)] obraz nie jest dostępny
+        \item[1d)] na ekranie wyświetlana jest odpowiednia informacja
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}}\\
+\hline
+\end{tabular}
+\caption{Przypadek użycia: Podłączenie telefonu do kontrolera}
+\label{tab:tabela_pu}
+\end{table}
+
+
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Nazwa PU: } Odłączenie telefonu od kontrolera  & \textbf{Numer PU:} 22 & \textbf{Priorytet:} niski \\
+\hline
+\textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} użytkownik, kontroler}\\
+\hline
+\textbf{Wyzwalacz: } odłączenie od kontrolera telefonu & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+\hline
+\multicolumn{3}{|c|}{
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{itemize}
+    \item \textbf{Powiązania:} Wysyłanie wideo na żywo
+    \item \textbf{Asocjacja:} brak
+    \item \textbf{Zawieranie:} brak
+    \item \textbf{Rozszerzenie:} brak
+    \item \textbf{Generalizacja:} brak
+    \end{itemize}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item kontroler przestaje wysyłać obraz przez port USB
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy poboczne:}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}}\\
+\hline
+\end{tabular}
+\caption{Przypadek użycia: Odłączenie telefonu od kontrolera}
+\label{tab:tabela_pu}
+\end{table}
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Nazwa PU: } Wykonanie zdjęcia & \textbf{Numer PU:} 23 & \textbf{Priorytet:} średni \\
+\hline
+\textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} użytkownik, kontroler, dron}\\
+\hline
+\textbf{Wyzwalacz: } wciśnięcie dedykowanego przycisku na kontrolerze & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
+\hline
+\multicolumn{3}{|c|}{
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{itemize}
+    \item \textbf{Powiązania:} brak
+    \item \textbf{Asocjacja:} brak
+    \item \textbf{Zawieranie:} brak
+    \item \textbf{Rozszerzenie:} Wysłanie sygnału do drona
+    \item \textbf{Generalizacja:} brak
+    \end{itemize}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item kontroler wysyła do drona sygnał z rządaniem zrobienia zdjęcia
+        \item dron odbiera sygnał
+        \item dron sprawdza czy dostępna jest karta SD z wystarczającą ilością wolnego miejsca
+        \item dron wykonuje zdjęcia z kamery i zapisuje je na karcie SD
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy poboczne:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item[1a)] w czasie wykonywania procedury powrotu dron ponownie nawiązuje sygnał z kontrolerem
+        \item[1b)] dron stabilizuje pozycję i przerywa procedurę powrotu
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item[1a)] kontroler wysyła do drona sygnał z rządaniem zrobienia zdjęcia
+        \item[1b)] dron odbiera sygnał
+        \item[1c)] dron sprawdza czy dostępna jest karta SD z wystarczającą ilością wolnego miejsca
+        \item[1d)] dron nie wykrywa obecności karty SD i przerywa operację
+        \item[2a)] kontroler wysyła do drona sygnał z rządaniem zrobienia zdjęcia
+        \item[2b)] dron odbiera sygnał
+        \item[2c)] dron sprawdza czy dostępna jest karta SD z wystarczającą ilością wolnego miejsca
+        \item[2d)] na karcie SD nie ma wystarczająco wolnego miejsca i dron przerywa operację
+        \newline
+    \end{enumerate}
+\end{minipage}}\\
+\hline
+\end{tabular}
+\caption{Przypadek użycia: Wykonanie zdjęcia}
+\label{tab:tabela_pu}
+\end{table}
+
+
+\end{document}
