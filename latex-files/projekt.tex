@@ -71,7 +71,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
     \textbf{Wyzwalacz: } Przełączenie switcha z off na on w dronie & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
     \hline
     \multicolumn{3}{|c|}{
-        \textbf{Powiązania:} brak
+        \textbf{Powiązania:} Wysyłanie video live z kamery w dronie do kontrolera
     }\\
     \hline
     \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
@@ -309,6 +309,178 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
     \caption{Przypadki użycia dla wyłączenia silników drona}
     \label{tab:tabela_pu}
     \end{table}
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+    \hline
+    \textbf{Nazwa PU:} Przesył sygnału z kontrolera do drona & \textbf{Numer PU:} 7 & \textbf{Priorytet:} wysoki \\
+    \hline
+    \textbf{Aktor podstawowy:} Kontroler & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny}  \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Kontroler jako nadawca i dron jako odbiorca sygnału}\\
+    \hline
+    \textbf{Wyzwalacz: } Ruch kontrolerem  & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} wewnętrzny} \\
+    \hline
+    \multicolumn{3}{|c|}{
+        \textbf{Powiązania:} Odbiór sygnału z drona do kontrolera
+
+    }\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Kontroler sprawdza czy jest połączenie z dronem
+            \item Kontroler przesyła sygnał do drona
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Kontroler nie posiada połączenia z dronem
+            \item Zapala się kontrolka odpowiedzialna za informowanie o braku połączenia
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \end{tabular}
+    \caption{Przesył sygnału z kontrolera do drona}
+    \label{tab:tabela_pu}
+    \end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+    \hline
+    \textbf{Nazwa PU:} Przesył sygnału z drona do kontrolera & \textbf{Numer PU:} 8 & \textbf{Priorytet:} wysoki \\
+    \hline
+    \textbf{Aktor podstawowy:} Dron & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny}  \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Dron jako nadawca i kontroler jako odbiorca sygnału}\\
+    \hline
+    \textbf{Wyzwalacz: }   & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} wewnętrzny} \\
+    \hline
+    \multicolumn{3}{|c|}{
+        \textbf{Powiązania:} Odbiór sygnału z kontrolera do drona
+
+    }\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Dron sprawdza czy jest połączenie z kontrolerem
+            \item Dron przesyła sygnał do kontrolera
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Dron nie posiada połączenia z kontrolerem
+            \item Zapala się kontrolka odpowiedzialna za informowanie o braku połączenia
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \end{tabular}
+    \caption{Przesył sygnału z drona do kontrolera}
+    \label{tab:tabela_pu}
+    \end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+    \hline
+    \textbf{Nazwa PU:} Odbiór sygnału do kontrolera z drona & \textbf{Numer PU:} 9 & \textbf{Priorytet:} wysoki \\
+    \hline
+    \textbf{Aktor podstawowy:} kontroler & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny}  \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Kontroler jako odbiorca i dron jako nadawca sygnału}\\
+    \hline
+    \textbf{Wyzwalacz: }   & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} wewnętrzny} \\
+    \hline
+    \multicolumn{3}{|c|}{
+        \textbf{Powiązania:} Odbiór sygnału z drona do kontrolera
+
+    }\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Kontroler odbiera sygnał wysłany z drona
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Kontroler nie posiada połączenia z dronem
+            \item Kontroler nie otrzymuje sygnału z drona
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \end{tabular}
+    \caption{Odbiór sygnału do kontrolera z drona}
+    \label{tab:tabela_pu}
+    \end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+    \hline
+    \textbf{Nazwa PU:} Odbiór sygnału do drona z kontrolera & \textbf{Numer PU:} 12 & \textbf{Priorytet:} wysoki \\
+    \hline
+    \textbf{Aktor podstawowy:} kontroler & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny}  \\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Kontroler jako nadawca i dron jako odbiorca sygnału}\\
+    \hline
+    \textbf{Wyzwalacz: }   & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} wewnętrzny} \\
+    \hline
+    \multicolumn{3}{|c|}{
+        \textbf{Powiązania:} Odbiór sygnału z kontrolera do drona
+
+    }\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Dron odbiera sygnał wysłany z kontrolera
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
+    \begin{minipage}[t]{0.6\linewidth}
+        \begin{enumerate}
+            \item Kontroler nie posiada połączenia z dronem
+            \item Dron nie otrzymuje sygnału z kontrolera
+            \newline
+        \end{enumerate}
+    \end{minipage}}\\
+    \hline
+    \end{tabular}
+    \caption{Odbiór sygnału do drona z kontrolera}
+    \label{tab:tabela_pu}
+    \end{table}
+
+
+
+
+
 
 \begin{table}[h]
 \centering
