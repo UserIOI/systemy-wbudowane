@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.19)  17 APR 2024 19:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.19)  21 APR 2024 11:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -65,33 +65,76 @@ LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
 (Font)                  OML/cmm/b/it --> OML/plm/b/it on input line 362.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> OMS/plsy/b/n on input line 362.
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count193
+\float@exts=\toks16
+\float@box=\box51
+\@float@everytoks=\toks17
+\@floatcapt=\box52
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks16
-) (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
+\KV@toks@=\toks18
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count193
-\Gm@cntv=\count194
-\c@Gm@tempcnt=\count195
-\Gm@bindingoffset=\dimen141
-\Gm@wd@mp=\dimen142
-\Gm@odd@mp=\dimen143
-\Gm@even@mp=\dimen144
-\Gm@layoutwidth=\dimen145
-\Gm@layoutheight=\dimen146
-\Gm@layouthoffset=\dimen147
-\Gm@layoutvoffset=\dimen148
-\Gm@dimlist=\toks17
+\Gm@cnth=\count194
+\Gm@cntv=\count195
+\c@Gm@tempcnt=\count196
+\Gm@bindingoffset=\dimen143
+\Gm@wd@mp=\dimen144
+\Gm@odd@mp=\dimen145
+\Gm@even@mp=\dimen146
+\Gm@layoutwidth=\dimen147
+\Gm@layoutheight=\dimen148
+\Gm@layouthoffset=\dimen149
+\Gm@layoutvoffset=\dimen150
+\Gm@dimlist=\toks19
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count196
-\l__pdf_internal_box=\box51
+\l__color_backend_stack_int=\count197
+\l__pdf_internal_box=\box53
 ) (./projekt.aux
+
+LaTeX Warning: Label `tab:tabela_pu' multiply defined.
+
+
+LaTeX Warning: Label `tab:tabela_pu' multiply defined.
+
+
+LaTeX Warning: Label `tab:tabela_pu' multiply defined.
+
+
+LaTeX Warning: Label `tab:tabela_pu' multiply defined.
+
+
+LaTeX Warning: Label `tab:tabela_pu' multiply defined.
+
+
+LaTeX Warning: Label `tab:tabela_pu' multiply defined.
+
+
+LaTeX Warning: Label `tab:tabela_pu' multiply defined.
+
 
 LaTeX Warning: Label `tab:tabela_pu' multiply defined.
 
@@ -137,23 +180,41 @@ LaTeX Warning: Label `tab:tabela_pu' multiply defined.
 )
 \openout1 = `projekt.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+ (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count198
+\scratchdimen=\dimen151
+\scratchbox=\box54
+\nofMPsegments=\count199
+\nofMParguments=\count266
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count267
+\MPscratchDim=\dimen152
+\MPnumerator=\count268
+\makeMPintoPDFobject=\count269
+\everyMPtoPDFconversion=\toks21
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -188,432 +249,557 @@ LaTeX Font Info:    ... okay on input line 10.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for OML+plm on input line 11.
+LaTeX Font Info:    Trying to load font information for OML+plm on input line 13.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/polski/omlplm.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Trying to load font information for OMS+plsy on input line 11.
+LaTeX Font Info:    Trying to load font information for OMS+plsy on input line 13.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/polski/omsplsy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Trying to load font information for OMX+plex on input line 11.
+LaTeX Font Info:    Trying to load font information for OMX+plex on input line 13.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/polski/omxplex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <14.4> on input line 11.
+(Font)              <14.4> on input line 13.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 11.
+(Font)              <10> on input line 13.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 11.
+(Font)              <7> on input line 13.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 18.
+(Font)              <12> on input line 20.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 18.
+(Font)              <8> on input line 20.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 18.
+(Font)              <6> on input line 20.
  [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plit.enc}] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 65--65
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
 []\OT4/cmr/bx/n/12 Nazwa PU: \OT4/cmr/m/n/12 Wª¡-cze-nie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
 []\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
  []
 
 
-Underfull \hbox (badness 1205) in paragraph at lines 84--84
+Underfull \hbox (badness 1205) in paragraph at lines 86--86
 []\OT4/cmr/m/n/12 Uruchomienie dro-na, po-ja-wie-nie si¦ kon-tro-l-ki na
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--84
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 
  []
 
 
-Overfull \hbox (31.83997pt too wide) in paragraph at lines 63--98
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 65--100
  [][] 
  []
 
 
-Underfull \hbox (badness 2717) in paragraph at lines 106--106
+Underfull \hbox (badness 2717) in paragraph at lines 108--108
 []\OT4/cmr/bx/n/12 Nazwa PU: \OT4/cmr/m/n/12 Wy-ª¡-cze-nie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--108
+Underfull \hbox (badness 10000) in paragraph at lines 110--110
 []\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--125
+Underfull \hbox (badness 10000) in paragraph at lines 127--127
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
 
  []
 
 
-Overfull \hbox (31.83997pt too wide) in paragraph at lines 104--139
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 106--141
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
 []\OT4/cmr/bx/n/12 Nazwa PU: \OT4/cmr/m/n/12 Wª¡-cze-nie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--149
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
 []\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--166
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
 
  []
 
 
-Overfull \hbox (31.83997pt too wide) in paragraph at lines 145--180
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 147--182
  [][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 2717) in paragraph at lines 188--188
+Underfull \hbox (badness 2717) in paragraph at lines 190--190
 []\OT4/cmr/bx/n/12 Nazwa PU: \OT4/cmr/m/n/12 Wy-ª¡-cze-nie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--190
+Underfull \hbox (badness 10000) in paragraph at lines 192--192
 []\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--207
+Underfull \hbox (badness 10000) in paragraph at lines 209--209
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--218
+Underfull \hbox (badness 10000) in paragraph at lines 220--220
 
  []
 
 
-Overfull \hbox (31.83997pt too wide) in paragraph at lines 186--221
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 188--223
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 231--231
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
 []\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
  []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 251--251
+Underfull \hbox (badness 3919) in paragraph at lines 253--253
 []\OT4/cmr/m/n/12 Przytrzymanie przy-ci-sku 'uru-cho-mie-nie sil-ni-ków'
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--251
+Underfull \hbox (badness 10000) in paragraph at lines 253--253
 
  []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 263--263
+Underfull \hbox (badness 3919) in paragraph at lines 265--265
 []\OT4/cmr/m/n/12 Przytrzymanie przy-ci-sku 'uru-cho-mie-nie sil-ni-ków'
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
 
  []
 
 
-Overfull \hbox (31.83997pt too wide) in paragraph at lines 227--266
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 229--268
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 2717) in paragraph at lines 274--274
+[5]
+Underfull \hbox (badness 2717) in paragraph at lines 276--276
 []\OT4/cmr/bx/n/12 Nazwa PU: \OT4/cmr/m/n/12 Wy-ª¡-cze-nie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--276
+Underfull \hbox (badness 10000) in paragraph at lines 278--278
 []\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--295
+Underfull \hbox (badness 10000) in paragraph at lines 297--297
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
 
  []
 
 
-Overfull \hbox (31.83997pt too wide) in paragraph at lines 272--309
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 274--311
+ [][] 
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 340--340
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
+
+ []
+
+
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 318--354
  [][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 338--338
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--349
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
 
  []
 
 
-Overfull \hbox (31.83997pt too wide) in paragraph at lines 316--352
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 360--396
+ [][] 
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 423--423
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--434
+
+ []
+
+
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 402--437
  [][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 380--380
+Underfull \hbox (badness 10000) in paragraph at lines 464--464
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--391
+Underfull \hbox (badness 10000) in paragraph at lines 475--475
 
  []
 
 
-Overfull \hbox (31.83997pt too wide) in paragraph at lines 358--394
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 443--478
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 421--421
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 432--432
-
- []
-
-
-Overfull \hbox (31.83997pt too wide) in paragraph at lines 400--435
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 462--462
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 473--473
-
- []
-
-
-Overfull \hbox (31.83997pt too wide) in paragraph at lines 441--476
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 491--491
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
 []\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
  []
 
 
-Underfull \hbox (badness 4316) in paragraph at lines 495--495
+Underfull \hbox (badness 4316) in paragraph at lines 497--497
 []\OT4/cmr/bx/n/12 Wyzwalacz:  \OT4/cmr/m/n/12 wci-±nie-cie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 511--511
+Underfull \hbox (badness 10000) in paragraph at lines 513--513
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 526--526
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
 
  []
 
 
-Overfull \hbox (31.83997pt too wide) in paragraph at lines 487--529
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 489--531
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 8132) in paragraph at lines 538--538
+[9]
+Underfull \hbox (badness 8132) in paragraph at lines 540--540
 []\OT4/cmr/bx/n/12 Nazwa PU: \OT4/cmr/m/n/12 Ka-li-bra-cja
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 540--540
+Underfull \hbox (badness 10000) in paragraph at lines 542--542
 []\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
  []
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 544--544
+Underfull \hbox (badness 2245) in paragraph at lines 546--546
 []\OT4/cmr/bx/n/12 Wyzwalacz: Wci-±ni¦-cie
  []
 
 
-Underfull \hbox (badness 5064) in paragraph at lines 566--566
+Underfull \hbox (badness 5064) in paragraph at lines 568--568
 []\OT4/cmr/m/n/12 wci±ni¦cie przy-ci-sku roz-po-czy-na-j¡-ce-go ka-li-bra-cje
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--566
+Underfull \hbox (badness 10000) in paragraph at lines 568--568
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--580
+Underfull \hbox (badness 10000) in paragraph at lines 582--582
 
  []
 
 
-Overfull \hbox (31.83997pt too wide) in paragraph at lines 536--583
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 538--585
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 4940) in paragraph at lines 592--592
+[10]
+Underfull \hbox (badness 4940) in paragraph at lines 594--594
 []\OT4/cmr/bx/n/12 Nazwa PU: \OT4/cmr/m/n/12 Ša-do-wa-nie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 594--594
+Underfull \hbox (badness 10000) in paragraph at lines 596--596
 []\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 598--598
+Underfull \hbox (badness 1173) in paragraph at lines 600--600
 \OT4/cmr/m/n/12 bla USB-C (pod-ª¡-czo-ne-go
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 620--620
+Underfull \hbox (badness 10000) in paragraph at lines 622--622
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 630--630
+Underfull \hbox (badness 10000) in paragraph at lines 632--632
 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 4940) in paragraph at lines 645--645
+[11{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plmi.enc}]
+Underfull \hbox (badness 4940) in paragraph at lines 647--647
 []\OT4/cmr/bx/n/12 Nazwa PU: \OT4/cmr/m/n/12 Ša-do-wa-nie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 647--647
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
 []\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 651--651
+Underfull \hbox (badness 1173) in paragraph at lines 653--653
 \OT4/cmr/m/n/12 bla USB-C (pod-ª¡-czo-ne-go
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 673--673
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 683--683
+Underfull \hbox (badness 10000) in paragraph at lines 685--685
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 720--720
 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 718--718
-
- []
-
-
-Overfull \hbox (197.83568pt too wide) in paragraph at lines 695--726
+Overfull \hbox (197.83568pt too wide) in paragraph at lines 697--728
  [][] 
  []
 
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
+[]\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
+ []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3] [4] [5] [6] [7] [8] [9] [10] [11{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plmi.enc}] [12] [13] [14] (./projekt.aux)
+Underfull \hbox (badness 1226) in paragraph at lines 770--770
+[]\OT4/cmr/m/n/12 dron usta-la ja-kie usta-wie-nie sil-ni-ków po-skut-ku-je
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 770--770
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 782--782
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 799--799
+[]\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
+ []
+
+
+Underfull \hbox (badness 4316) in paragraph at lines 803--803
+[]\OT4/cmr/bx/n/12 Wyzwalacz:  \OT4/cmr/m/n/12 wci-±ni¦-cie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 825--825
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 837--837
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--849
+
+ []
+
+
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 795--852
+ [][] 
+ []
+
+[15]
+Overfull \vbox (29.97398pt too high) has occurred while \output is active []
+
+ [16]
+Underfull \hbox (badness 1189) in paragraph at lines 869--869
+[]\OT4/cmr/bx/n/12 Wyzwalacz:  \OT4/cmr/m/n/12 prze-rwa-nie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 889--889
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 898--898
+
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 918--918
+[]\OT4/cmr/bx/n/12 Wyzwalacz:  \OT4/cmr/m/n/12 prze-rwa-nie
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 940--940
+[]\OT4/cmr/m/n/12 po do-tar-ciu do miej-sca star-tu dron roz-po-czy-na
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 940--940
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--949
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 962--962
+
+ []
+
+
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 910--965
+ [][] 
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 977--977
+[]\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1001--1001
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1012
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 1031--1031
+[]\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
+ []
+
+
+Underfull \hbox (badness 2057) in paragraph at lines 1035--1035
+[]\OT4/cmr/bx/n/12 Wyzwalacz:  \OT4/cmr/m/n/12 odª¡-cze-nie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
+[]\OT4/cmr/bx/n/12 Aktor pod-sta-wo-wy:
+ []
+
+
+Underfull \hbox (badness 4316) in paragraph at lines 1077--1077
+[]\OT4/cmr/bx/n/12 Wyzwalacz:  \OT4/cmr/m/n/12 wci-±ni¦-cie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1097--1097
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1106--1106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1121
+
+ []
+
+
+Overfull \hbox (31.83997pt too wide) in paragraph at lines 1069--1124
+ [][] 
+ []
+
+[20]
+Overfull \vbox (24.47398pt too high) has occurred while \output is active []
+
+ [21]
+<../resources/diagramWbudowane.drawio.png, id=76, 1169.36874pt x 1161.33875pt>
+File: ../resources/diagramWbudowane.drawio.png Graphic file (type png)
+<use ../resources/diagramWbudowane.drawio.png>
+Package pdftex.def Info: ../resources/diagramWbudowane.drawio.png  used on input line 1132.
+(pdftex.def)             Requested size: 475.45825pt x 472.20029pt.
+ [22 <../resources/diagramWbudowane.drawio.png>] (./projekt.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1334 strings out of 476025
- 22465 string characters out of 5790016
- 1908388 words of memory out of 5000000
- 21808 multiletter control sequences out of 15000+600000
+ 2223 strings out of 476025
+ 36219 string characters out of 5790016
+ 1865388 words of memory out of 5000000
+ 22661 multiletter control sequences out of 15000+600000
  523126 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,11n,62p,781b,380s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,11n,62p,781b,382s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on projekt.pdf (14 pages, 83491 bytes).
+Output written on projekt.pdf (22 pages, 195375 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
