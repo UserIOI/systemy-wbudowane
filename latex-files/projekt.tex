@@ -504,9 +504,9 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \begin{minipage}[t]{0.6\linewidth}
     \begin{enumerate}
         \item wciśnięcie płytki zawierającej karte SD
-        \item odskoczenie płytki
+        \item wysunięcie płytki
         \item usunięcie możliwości zapisu na karte SD w tym fotografowanie
-        \item wsunięcie płytki spowrotem (poprzez użytkownika)
+        \item wsunięcie płytki z powrotem (poprzez użytkownika)
         \item jeśli wykryto karte to przwrócenie możliwości zapisu na karte SD
         \newline
     \end{enumerate}
@@ -518,7 +518,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \begin{minipage}[t]{0.6\linewidth}
     \begin{enumerate}
         \item wciśnięcie płytki zawierającej karte SD
-        \item nie odskoczenie płytki
+        \item nie nastpąpiło wysunięcie płytki
         \item dostęp do karty SD poprzeze rozkręcenie drona
         \item usunięcie możliwości zapisu na karte SD w tym fotografowanie
         \item skręcenie drona spowrotem (poprzez użytkownika)
@@ -705,21 +705,40 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \textbf{Wyzwalacz: } uruchomienie drona & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} zewnętrzny} \\
 \hline
 \multicolumn{3}{|c|}{
-\textbf{Powiązania:} brak}
-\\
+\begin{minipage}[t]{0.6\linewidth}
+    \begin{itemize}
+    \item \textbf{Powiązania:} Podłączenie telefonu do kontrolera
+    \item \textbf{Asocjacja:} brak
+    \item \textbf{Zawieranie:} brak
+    \item \textbf{Rozszerzenie:} brak
+    \item \textbf{Generalizacja:} brak
+    \end{itemize}
+\end{minipage}}\\
 \hline
 \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
 \begin{minipage}[t]{0.6\linewidth}
     \begin{enumerate}
         \item włączenie drona
-        \item rozpoczęcie wysyłania wideo
-        \item odbiór wideo poprzez drona
-        \item wyświetlanie wideo na dronie
+        \item uruchomienie kamery
+        \item rozpoczęcie przesyłu wideo
+        \item odbiór wideo poprzez kontroler
+        \item przesłane wideo do podłączonego urządzenia mobilnego
+        \item wyświetlenie wideo poprzeez podłaczone urządzenie
         \newline
     \end{enumerate}
 \end{minipage}}\\
 \hline
-\multicolumn{3}{|c|}{\textbf{Przepływy poboczne:} brak}
+\multicolumn{3}{|c|}{\textbf{Przepływy poboczne:} \begin{minipage}[t]{0.6\linewidth}
+    \begin{enumerate}
+        \item włączenie drona
+        \item rozpoczęcie wysyłania wideo
+        \item odbiór wideo poprzez kontroler
+        \item nie wykryto podłaczonego urządzenia mobilnego
+        \item oczekiwanie w tle, kontrolera na podłączenie telefonu
+        \item przejście do przypadku użycia "Podłączenie telefonu do kontrolera"
+        \newline
+    \end{enumerate}
+\end{minipage}}
 \\
 \hline
 \multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:} brak}\\
