@@ -66,7 +66,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
     \hline
     \textbf{Nazwa PU:} Włączenie drona & \textbf{Numer PU:} 1 & \textbf{Priorytet:} wysoki \\
     \hline
-    \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy}  \\
+    \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} Ogólny}  \\
     \hline
     \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Użytkownik, potrzeba przełączenia switcha z off na on na dronie}\\
     \hline
@@ -80,6 +80,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
     \begin{minipage}[t]{0.6\linewidth}
         \begin{enumerate}
             \item Przesunięcię switcha z pozycji 'off' na pozycje 'on'
+            \item Próba sparowania drona z kontrolerem
             \item Uruchomienie drona, pojawienie się kontrolki na dronie świadczącej o włączeniu
             \newline
         \end{enumerate}
@@ -107,7 +108,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
     \hline
     \textbf{Nazwa PU:} Wyłączenie drona & \textbf{Numer PU:} 2 & \textbf{Priorytet:} wysoki \\
     \hline
-    \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy}  \\
+    \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} Ogólny}  \\
     \hline
     \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Użytkownik, potrzeba przełączenia switcha z on na off na dronie}\\
     \hline
@@ -121,6 +122,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
     \begin{minipage}[t]{0.6\linewidth}
         \begin{enumerate}
             \item Przesunięcię switcha z pozycji 'on' na pozycje 'off'
+            \item Dron kończy komunikację z kontrolerem
             \item Wyłączenie drona, zniknięcie kontrolki na dronie świadczącej o włączeniu
             \newline
         \end{enumerate}
@@ -148,7 +150,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
     \hline
     \textbf{Nazwa PU:} Włączenie kontrolera & \textbf{Numer PU:} 3 & \textbf{Priorytet:} wysoki \\
     \hline
-    \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy}  \\
+    \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} Ogólny}  \\
     \hline
     \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Użytkownik, potrzeba przełączenia switcha z off na on na kontrolerze}\\
     \hline
@@ -162,6 +164,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
     \begin{minipage}[t]{0.6\linewidth}
         \begin{enumerate}
             \item Przesunięcię switcha z pozycji 'off' na pozycje 'on'
+            \item Próba połączenia kontrolera z dronem
             \item Uruchomienie kontrolera, pojawienie się kontrolki na kontrolerze świadczącej o włączeniu
             \newline
         \end{enumerate}
@@ -189,7 +192,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
     \hline
     \textbf{Nazwa PU:} Wyłączenie kontrolera & \textbf{Numer PU:} 4 & \textbf{Priorytet:} wysoki \\
     \hline
-    \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy}  \\
+    \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} Ogólny}  \\
     \hline
     \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Użytkownik, potrzeba przełączenia switcha z 'off' na 'on' na kontrolerze}\\
     \hline
@@ -203,6 +206,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
     \begin{minipage}[t]{0.6\linewidth}
         \begin{enumerate}
             \item Przesunięcię switcha z pozycji 'on' na pozycje 'off'
+            \item Zakończenie komunikacji z kontrolera z dronem
             \item Wyłączenie akumulatora
             \newline
         \end{enumerate}
@@ -311,174 +315,6 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
     \caption{Przypadki użycia dla wyłączenia silników drona}
     \label{tab:tabela_pu}
     \end{table}
-
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
-    \hline
-    \textbf{Nazwa PU:} Przesył sygnału z kontrolera do drona & \textbf{Numer PU:} 7 & \textbf{Priorytet:} wysoki \\
-    \hline
-    \textbf{Aktor podstawowy:} Kontroler & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny}  \\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Kontroler jako nadawca i dron jako odbiorca sygnału}\\
-    \hline
-    \textbf{Wyzwalacz: } Ruch kontrolerem  & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} wewnętrzny} \\
-    \hline
-    \multicolumn{3}{|c|}{
-        \textbf{Powiązania:} Odbiór sygnału z drona do kontrolera
-
-    }\\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
-    \begin{minipage}[t]{0.6\linewidth}
-        \begin{enumerate}
-            \item Kontroler sprawdza czy jest połączenie z dronem
-            \item Kontroler przesyła sygnał do drona
-            \newline
-        \end{enumerate}
-    \end{minipage}}\\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
-    \begin{minipage}[t]{0.6\linewidth}
-        \begin{enumerate}
-            \item Kontroler nie posiada połączenia z dronem
-            \item Zapala się kontrolka odpowiedzialna za informowanie o braku połączenia
-            \newline
-        \end{enumerate}
-    \end{minipage}}\\
-    \hline
-    \end{tabular}
-    \caption{Przesył sygnału z kontrolera do drona}
-    \label{tab:tabela_pu}
-    \end{table}
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
-    \hline
-    \textbf{Nazwa PU:} Przesył sygnału z drona do kontrolera & \textbf{Numer PU:} 8 & \textbf{Priorytet:} wysoki \\
-    \hline
-    \textbf{Aktor podstawowy:} Dron & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny}  \\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Dron jako nadawca i kontroler jako odbiorca sygnału}\\
-    \hline
-    \textbf{Wyzwalacz: }   & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} wewnętrzny} \\
-    \hline
-    \multicolumn{3}{|c|}{
-        \textbf{Powiązania:} Odbiór sygnału z kontrolera do drona
-
-    }\\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
-    \begin{minipage}[t]{0.6\linewidth}
-        \begin{enumerate}
-            \item Dron sprawdza czy jest połączenie z kontrolerem
-            \item Dron przesyła sygnał do kontrolera
-            \newline
-        \end{enumerate}
-    \end{minipage}}\\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
-    \begin{minipage}[t]{0.6\linewidth}
-        \begin{enumerate}
-            \item Dron nie posiada połączenia z kontrolerem
-            \item Zapala się kontrolka odpowiedzialna za informowanie o braku połączenia
-            \newline
-        \end{enumerate}
-    \end{minipage}}\\
-    \hline
-    \end{tabular}
-    \caption{Przesył sygnału z drona do kontrolera}
-    \label{tab:tabela_pu}
-    \end{table}
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
-    \hline
-    \textbf{Nazwa PU:} Odbiór sygnału do kontrolera z drona & \textbf{Numer PU:} 9 & \textbf{Priorytet:} wysoki \\
-    \hline
-    \textbf{Aktor podstawowy:} kontroler & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny}  \\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Kontroler jako odbiorca i dron jako nadawca sygnału}\\
-    \hline
-    \textbf{Wyzwalacz: }   & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} wewnętrzny} \\
-    \hline
-    \multicolumn{3}{|c|}{
-        \textbf{Powiązania:} Odbiór sygnału z drona do kontrolera
-
-    }\\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
-    \begin{minipage}[t]{0.6\linewidth}
-        \begin{enumerate}
-            \item Kontroler odbiera sygnał wysłany z drona
-            \newline
-        \end{enumerate}
-    \end{minipage}}\\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
-    \begin{minipage}[t]{0.6\linewidth}
-        \begin{enumerate}
-            \item Kontroler nie posiada połączenia z dronem
-            \item Kontroler nie otrzymuje sygnału z drona
-            \newline
-        \end{enumerate}
-    \end{minipage}}\\
-    \hline
-    \end{tabular}
-    \caption{Odbiór sygnału do kontrolera z drona}
-    \label{tab:tabela_pu}
-    \end{table}
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
-    \hline
-    \textbf{Nazwa PU:} Odbiór sygnału do drona z kontrolera & \textbf{Numer PU:} 12 & \textbf{Priorytet:} wysoki \\
-    \hline
-    \textbf{Aktor podstawowy:} kontroler & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny}  \\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Udziałowcy i cele:} Kontroler jako nadawca i dron jako odbiorca sygnału}\\
-    \hline
-    \textbf{Wyzwalacz: }   & \multicolumn{2}{|c|}{\textbf{Typ wyzwalacza:} wewnętrzny} \\
-    \hline
-    \multicolumn{3}{|c|}{
-        \textbf{Powiązania:} Odbiór sygnału z kontrolera do drona
-
-    }\\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Zwykły przepływ zdarzeń:}
-    \begin{minipage}[t]{0.6\linewidth}
-        \begin{enumerate}
-            \item Dron odbiera sygnał wysłany z kontrolera
-            \newline
-        \end{enumerate}
-    \end{minipage}}\\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Przepływy poboczne: brak}}\\
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Przepływy alternatywne/wyjątkowe:}
-    \begin{minipage}[t]{0.6\linewidth}
-        \begin{enumerate}
-            \item Kontroler nie posiada połączenia z dronem
-            \item Dron nie otrzymuje sygnału z kontrolera
-            \newline
-        \end{enumerate}
-    \end{minipage}}\\
-    \hline
-    \end{tabular}
-    \caption{Odbiór sygnału do drona z kontrolera}
-    \label{tab:tabela_pu}
-    \end{table}
-
 
 
 

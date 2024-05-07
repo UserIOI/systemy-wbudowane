@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1713690400 "/Users/pawelharaburda/Documents/sem6/systemy-wbudowane/latex-files/projekt.tex" "projekt.pdf" "projekt" 1713690401 0
+["pdflatex"] 1715087050 "/Users/pawelharaburda/Documents/sem6/systemy-wbudowane/latex-files/projekt.tex" "projekt.pdf" "projekt" 1715087050 0
   "../resources/diagramWbudowane.drawio.png" 1713690285 201444 e2d7f253ddcc03a045feabb1cf45b9b5 ""
-  "/Users/pawelharaburda/Documents/sem6/systemy-wbudowane/latex-files/projekt.tex" 1713690400 45693 c60c371995cc7cb3b34f92c0b3f0ecd1 ""
+  "/Users/pawelharaburda/Documents/sem6/systemy-wbudowane/latex-files/projekt.tex" 1715087049 40767 73c87ea0004a39f1322576bc4c13061e ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plit.enc" 1136849721 1946 62ba825cda1ff16dbaa60d53ac60525a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plmi.enc" 1136849721 2005 f094775651a1386335c158fb632529f1 ""
@@ -61,8 +61,8 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1697730699 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1697730649 7883462 25e3a4b0ec72ef719f2ef925f7e475bd ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "projekt.aux" 1713690401 5143 aff954a6095853037066be7fce56a63b "pdflatex"
-  "projekt.tex" 1713690400 45693 c60c371995cc7cb3b34f92c0b3f0ecd1 ""
+  "projekt.aux" 1715087050 4437 db0c36fbe5c9e7c8c99ee16ff6e72afa "pdflatex"
+  "projekt.tex" 1715087049 40767 73c87ea0004a39f1322576bc4c13061e ""
   (generated)
   "projekt.aux"
   "projekt.log"
