@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1718138799 "/Users/pawelharaburda/Documents/sem6/systemy-wbudowane/latex-files/projekt.tex" "projekt.pdf" "projekt" 1718138800 0
+["pdflatex"] 1718138917 "/Users/pawelharaburda/Documents/sem6/systemy-wbudowane/latex-files/projekt.tex" "projekt.pdf" "projekt" 1718138917 0
   "../resources/Diagram_interakcji.drawio.pdf" 1718136968 43802 9a5ac12774aa2634066fdae18dec097b ""
   "../resources/diagramWbudowane.drawio.png" 1713690285 201444 e2d7f253ddcc03a045feabb1cf45b9b5 ""
   "../resources/diagram_komponentow.png" 1718125865 133065 0b3706b42888fe4cb9cfb193a2417f74 ""
@@ -8,7 +8,7 @@
   "../resources/drzewo_przygotowania_do_lotu.pdf" 1718134929 37757 9b6b510b30cd549954b9806078b96ed2 ""
   "../resources/przeplyw_sygna_z_kontrolera.pdf" 1718134929 42197 81961a8296c28bf3f944a03c5aacb75a ""
   "../resources/wideo_stany_idk.pdf" 1718129455 26596 3728d76c592c758f79e71c12d7d525b8 ""
-  "/Users/pawelharaburda/Documents/sem6/systemy-wbudowane/latex-files/projekt.tex" 1718138799 49649 00062699984054a9baba133543c4168c ""
+  "/Users/pawelharaburda/Documents/sem6/systemy-wbudowane/latex-files/projekt.tex" 1718138917 49648 dc4e372c263c052e3fa918fda1b557ea ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plit.enc" 1136849721 1946 62ba825cda1ff16dbaa60d53ac60525a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/pl/plmi.enc" 1136849721 2005 f094775651a1386335c158fb632529f1 ""
@@ -79,8 +79,8 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1697730699 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1697730649 7883462 25e3a4b0ec72ef719f2ef925f7e475bd ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "projekt.aux" 1718138800 5998 0e9a02ad47f44b0585643a06a1e2e5e3 "pdflatex"
-  "projekt.tex" 1718138799 49649 00062699984054a9baba133543c4168c ""
+  "projekt.aux" 1718138917 5998 0e9a02ad47f44b0585643a06a1e2e5e3 "pdflatex"
+  "projekt.tex" 1718138917 49648 dc4e372c263c052e3fa918fda1b557ea ""
   (generated)
   "projekt.aux"
   "projekt.log"
