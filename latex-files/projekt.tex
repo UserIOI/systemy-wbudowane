@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage{polski}
 \usepackage{float}
+\usepackage{pdfpages}
 \usepackage{graphicx}
 \usepackage[margin=2cm]{geometry}
 
@@ -20,7 +21,15 @@ W dokumentacji używane będą następujące pojęcia:
     \item BSP $ - $ bezzałogowy statek powietrzny (ang. \textit{unmanned aerial vehicle, skr. UAV}), statek powietrzny bez możliwości zabierania pasażerów, w tym przypadku pilotowany zdalnie
     \item dron $ - $ inaczej BSP
     \item kontroler $ - $ niewielkie urządzenie umożliwiające sterowanie BSP na odległość poprzez RC, używające urządzenia z systemem Android lub iOS jako wyświetlacza
-    \item RC $ - $ Radio Control, zdalne sterowanie realizowane drogą radiową
+    \item RC $ - $ (Radio Control) zdalne sterowanie realizowane drogą radiową
+    \item GPS (Global Positioning System)$ - $ System nawigacji satelitarnej umożliwiający określenie dokładnej pozycji geograficznej na całym świecie.
+    \item ULC (Urząd Lotnictwa Cywilnego)$ - $ Polska instytucja odpowiedzialna za nadzór i regulację cywilnego ruchu lotniczego, w tym dronów.
+    \item I2C (Inter-Integrated Circuit)$ - $ Protokół komunikacyjny umożliwiający wymianę danych pomiędzy różnymi układami scalonymi za pomocą dwóch linii $ - $ danych (SDA) i zegara (SCL).
+    \item SPI (Serial Peripheral Interface)$ - $ Protokół komunikacyjny do szybkiej wymiany danych pomiędzy mikrokontrolerem, a urządzeniami peryferyjnymi za pomocą czterech linii $ - $ danych wejścia (MISO), danych wyjścia (MOSI), zegara (SCK) i sygnału wyboru urządzenia (SS).
+    \item GPIO (General Purpose Input/Output)$ - $ Uniwersalne piny na mikrokontrolerze lub komputerze jednopłytkowym, które mogą być konfigurowane jako wejścia lub wyjścia do sterowania różnymi urządzeniami.
+    \item MIPI CSI (Mobile Industry Processor Interface Camera Serial Interface)$ - $ Standard interfejsu używany do podłączania kamer do procesorów, umożliwiający przesyłanie danych obrazu z dużą prędkością.
+    \item CPU (Central Processing Unit)$ - $ Centralna jednostka przetwarzająca (procesor), odpowiedzialna za wykonywanie instrukcji i zarządzanie operacjami w komputerze lub mikrokontrolerze.
+    \item JSS $ - $ jednostka sterująca silnikami
 \end{itemize}
 
 \section{Jakie są założenia projektu (CO)}
@@ -36,7 +45,7 @@ System zajmuje się obsługą BSP z kamerą na pokładzie, odpowiada za umożliw
     \item Zapisywanie lokalizacji startowej $ - $ BSP będzie zapisywał lokalizację miejsca startowego w pamięci wewnętrznej poprzez wykorzystanie systeu GPS, co pozwali na szybkie odnalezienie punktu startowego w przypadku konieczności powrotu.
     \item Automatyczne powracanie do lokalizacji startowej $ - $ w przypadku utracenia połączenia z kontrolerem BSP automatycznie powróci do miejsca startowego wykorzystując odpowiednie algorytmy nawigacyjne i zapisaną lokalizację startową.
     \item Kalibracja przez użytkownika $ - $ procedura kalibracji BSP będzie intuicyjna i będzie możliwa do przeprowadzenia przez użytkownika bez żadnych kwalifikacji. Razem z dronem dostarczana będzie instrukcja kalibracji "krok po kroku".
-    \item Diody kontrolne - każde ramię z silnikiem zostanie wyposażone w diodę kontrolną. Diody te będą ułatwiały proces kalibracji, a podczas lotu będą zwiększały widoczność BSP
+    \item Diody kontrolne $ - $ każde ramię z silnikiem zostanie wyposażone w diodę kontrolną oraz jedną diodę zamieszczoną z tyłu drona. Diody te będą ułatwiały proces kalibracji, a podczas lotu będą zwiększały widoczność BSP. Kontroler również będzie wyposażony w diody. (Diody będą opisane w części działania systemu.)
 \end{enumerate}
 \section{Gdzie system jest wykorzystywany (GDZIE)}
 Korzystać z systemu można w obszarach zamkniętych jak i otwartych. Między innymi: obszary zurbanizowane, terenty wiejskie, obszary leśne oraz górskie. Urządzenie nie nadaje się do korzystania w wodzie. 
@@ -178,7 +187,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
     \begin{minipage}[t]{0.6\linewidth}
         \begin{enumerate}
             \item Przesunięcię switcha z pozycji 'off' na pozycje 'on'
-            \item Próba połączenia kontrolera z dronem
+            \item Próba sparowania kontrolera z dronem
             \item Uruchomienie kontrolera, pojawienie się kontrolki na kontrolerze świadczącej o włączeniu
             \newline
         \end{enumerate}
@@ -338,7 +347,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
-\textbf{Nazwa PU:} Wyciągnięcie karty pamięci SD & \textbf{Numer PU:} 10 & \textbf{Priorytet:} niski \\
+\textbf{Nazwa PU:} Wyciągnięcie karty pamięci SD & \textbf{Numer PU:} 7 & \textbf{Priorytet:} niski \\
 \hline
 \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny} \\
 \hline
@@ -387,7 +396,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
-\textbf{Nazwa PU:} Kalibracja drona & \textbf{Numer PU:} 11 & \textbf{Priorytet:} średni \\
+\textbf{Nazwa PU:} Kalibracja drona & \textbf{Numer PU:} 8 & \textbf{Priorytet:} średni \\
 \hline
 \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny} \\
 \hline
@@ -441,7 +450,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
-\textbf{Nazwa PU: }Ładowanie akumulatorów drona  & \textbf{Numer PU:} 14 & \textbf{Priorytet:} średni \\
+\textbf{Nazwa PU: }Ładowanie akumulatorów drona  & \textbf{Numer PU:} 9 & \textbf{Priorytet:} średni \\
 \hline
 \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny} \\
 \hline
@@ -494,7 +503,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
-\textbf{Nazwa PU: }Ładowanie akumulatorów kontrolera  & \textbf{Numer PU:} 15 & \textbf{Priorytet:} średni \\
+\textbf{Nazwa PU: }Ładowanie akumulatorów kontrolera  & \textbf{Numer PU:} 10 & \textbf{Priorytet:} średni \\
 \hline
 \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} ogólny} \\
 \hline
@@ -546,7 +555,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
-\textbf{Nazwa PU: }Wysyłanie obrazu z kamery na żywo  & \textbf{Numer PU:} 16 & \textbf{Priorytet:} średni \\
+\textbf{Nazwa PU: }Wysyłanie obrazu z kamery na żywo  & \textbf{Numer PU:} 11 & \textbf{Priorytet:} średni \\
 \hline
 \textbf{Aktor podstawowy:} dron & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
 \hline
@@ -607,7 +616,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
-\textbf{Nazwa PU: } Wykonanie ruchu  & \textbf{Numer PU:} 17 & \textbf{Priorytet:} wysoki \\
+\textbf{Nazwa PU: } Wykonanie ruchu  & \textbf{Numer PU:} 12 & \textbf{Priorytet:} wysoki \\
 \hline
 \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
 \hline
@@ -663,7 +672,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
-\textbf{Nazwa PU: } Lądowanie  & \textbf{Numer PU:} 18 & \textbf{Priorytet:} średni \\
+\textbf{Nazwa PU: } Lądowanie  & \textbf{Numer PU:} 13 & \textbf{Priorytet:} średni \\
 \hline
 \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
 \hline
@@ -729,7 +738,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
-\textbf{Nazwa PU: } Wysyłanie sygnału PING do drona & \textbf{Numer PU:} 19 & \textbf{Priorytet:} średni \\
+\textbf{Nazwa PU: } Wysyłanie sygnału PING do drona & \textbf{Numer PU:} 14 & \textbf{Priorytet:} średni \\
 \hline
 \textbf{Aktor podstawowy:} kontroler & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
 \hline
@@ -778,7 +787,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
-\textbf{Nazwa PU: } Powrót do miejsca startu  & \textbf{Numer PU:} 20 & \textbf{Priorytet:} średni \\
+\textbf{Nazwa PU: } Powrót do miejsca startu  & \textbf{Numer PU:} 15 & \textbf{Priorytet:} średni \\
 \hline
 \textbf{Aktor podstawowy:} dron & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
 \hline
@@ -841,7 +850,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
-\textbf{Nazwa PU: } Podłączenie telefonu do kontrolera  & \textbf{Numer PU:} 21 & \textbf{Priorytet:} niski \\
+\textbf{Nazwa PU: } Podłączenie telefonu do kontrolera  & \textbf{Numer PU:} 16 & \textbf{Priorytet:} niski \\
 \hline
 \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
 \hline
@@ -895,7 +904,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
-\textbf{Nazwa PU: } Odłączenie telefonu od kontrolera  & \textbf{Numer PU:} 22 & \textbf{Priorytet:} niski \\
+\textbf{Nazwa PU: } Odłączenie telefonu od kontrolera  & \textbf{Numer PU:} 17 & \textbf{Priorytet:} niski \\
 \hline
 \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
 \hline
@@ -937,7 +946,7 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
-\textbf{Nazwa PU: } Wykonanie zdjęcia & \textbf{Numer PU:} 23 & \textbf{Priorytet:} średni \\
+\textbf{Nazwa PU: } Wykonanie zdjęcia & \textbf{Numer PU:} 18 & \textbf{Priorytet:} średni \\
 \hline
 \textbf{Aktor podstawowy:} użytkownik & \multicolumn{2}{|c|}{\textbf{Typ opisu:} szczegółowy} \\
 \hline
@@ -1042,6 +1051,77 @@ Spis danych które system będzie przetwarzał i wykorzystywał:
     \item Dane z kamery (MIPI CSI-2 w rozdzielczości 1920x1080)
     \item Dane z żyroskopu (przechowywane wartości: prędkość kątowa, oś X,Y,Z)
 \end{itemize}
+% ż
+\newpage
+\section{Diagramy stanów}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.98\textwidth]{../resources/diagram_stanow.drawio_1.pdf}
+    \caption[short]{Diagram stanów systemu}
+    \label{fig:label}
+  \end{figure}
+
+Kiedy system jest włączony użytkownik ma możliwość podłączenia/odłączenia urządzenia mobilnego przy pomocy, którego jest odbierane wideo co prezentuje poniższy diagram:
+
+  \begin{figure}[h]
+      \centering
+      \includegraphics[width=0.80\textwidth]{../resources/wideo_stany_idk.pdf}
+      \caption[short]{Diagram przepływu obrazu}
+      \label{fig:label}
+    \end{figure}
+
+\newpage
+\section{Opis działania systemu}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.98\textwidth]{../resources/drzewo_przygotowania_do_lotu.pdf}
+    \caption[short]{Drzewo decyzyjne przygotowania do lotu}
+    \label{fig:label}
+  \end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.80\textwidth]{../resources/przeplyw_sygna_z_kontrolera.pdf}
+    \caption[short]{Diagram przepływu sygnału z kontrolera do drona}
+    \label{fig:label}
+  \end{figure}
+
+  \newpage
+
+\textbf{Sposób poruszania się drona:}
+\begin{itemize}
+    \item Poruszenie lewego drążka w przód, powoduje: jednostka sterująca silnikami (JSS) zwiększa obroty wszystkich silników co powoduje wznoszenie się drona.
+    \item Poruszenie lewego drążka w tył, powoduje: JSS zmniejsza obroty wszystkich silników co powoduje opadanie drona.
+    \item Pozostawienie lewego drążka bez ingerencji użytkownika, powoduje: JSS ustawia domyślną prędkość silników co pozwala BSP utrzymywanie wysokości.
+    \item Poruszenie prawego drążka w przód, powoduje: JSS zwiększa obroty silników z tyłu oraz lekko przechyla się BSP.
+    \item Poruszenie prawego drążka w tył, powoduje: JSS zwiększa obroty silników z przodu oraz lekko przechyla się BSP.
+    \item Poruszenie prawego drążka w prawo, powoduje: JSS zwiększa obroty silników z lewej co powoduje poruszanie się BSP w prawo.
+    \item Poruszenie prawego drążka w lewo, powoduje: JSS zwiększa obroty silników z prawej co powoduje poruszanie się BSP w prawo.
+\end{itemize}
+
+\textbf{Diody kontrolne:}
+\begin{itemize}
+    \item Kalibracja - Zaświecenie na 3 sekundy na zielono lub czerwono w zależności od odpowiednio powodzenia i niepowodzenia, konkretnego etapu kalibracji
+    \item Światła nawigacyjne w trakcie lotu - lewe ramiona na czerwono i prawe ramiona na zielono, oraz białe światło tylne
+    \item Niski poziom akumulatorów przy włączeniu drona - diody na ramieniach mrugają na czerwono
+    \item Niski poziom akumulatorów w trakcie lotu - zaświecenie diody kontrolnej na kontrolerze na czerwono
+    \item Brak połączenia pomiędzy kontrolerem a BSP - mruganie diody kontrolnej kontrolera oraz diod na ramieniach BSP 
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.94\textwidth]{../resources/diagram_przeplywu_kalibracji.drawio_1.pdf}
+    \caption[short]{Diagram przepływu kalibracji}
+    \label{fig:label}
+  \end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.70\textwidth]{../resources/Diagram_interakcji.drawio.pdf}
+    \caption[short]{Diagram interakcji}
+    \label{fig:label}
+  \end{figure}
 % ż
 
 \end{document}
