@@ -1003,4 +1003,45 @@ Korzystając z urządzenia trzeba brać pod uwagę czynniki takie jak:
     \label{fig:example}
 \end{figure}
 
+% ż
+\newpage
+\section{Diagram komponentów}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{../resources/diagram_komponentow.png}
+    \caption{Diagram przypadków użycia}
+    \label{fig:example}
+\end{figure}
+
+Wytłumaczenie wyborów niektórych połączeń:
+\begin{itemize}
+    \item Połączenie między pamięcią flash a CPU: wykorzystanie SPI ze względu na potrzebę szybkiego przesyłania danych przy zapisie zdjęć.
+    \item Moduł zasilający wykorzystuje I2C aby mieć możliwość śledzenia poziomu naładowania.
+    \item Moduł radiowy w połączeniu z CPU: wykorzystanie SPI ze względu na możliwość przesyłania danych w dnie strony oraz potrzeba dużej prędkości dla obrazu z kamery
+    \item Czujniki odległości w połączeniu z CPU: połączenie I2C ze względu na oszczędność pinów oraz możliwość podłączenia do jednej magistrali
+    \item Wszystkie urządzenia potrzebujące zasilania są podłączone do modułu zasilającego (dla czytelności diagramów nie zostało to zaznaczone)
+\end{itemize}
+
+% ż
+
+\section{Dane w systemie}
+
+Spis danych które system będzie przetwarzał i wykorzystywał:
+\begin{itemize}
+    \item Częstotliwość radiowa (połączenie między kontrolerem a dronem): ~5,8 GHz
+    \item Prędkość silników (dla każdego silnika oddzielna zmienna): obr$/$s
+    \item Kierunek obrotu silników (dla każdego silnika oddzielna zmienna): 0/1 (obrót w lewo/w prawo)
+    \item Naładowanie baterii drona: 0$-$100\% 
+    \item Diody kontrolne (dwukolorowe diody zielono/czerwone): 00/01/10 (nie zapalone/ zapalone czerwone/ zapalonie zielone)
+    \item Miejsce startu drona z GPS (szerokość i długość geograficzna w formacie double)
+    \item Miejsce aktualne drona z GPS (szerokość i długość geograficzna w formacie double)
+    \item Wysokość aktualna drona z GPS (w metrach)
+    \item Odległość od przeszkody (w centymetrach)
+    \item Położenie drążka kontrolera (zmienne x oraz y w zmiennej float (0.0$-$1.0) dla każdego drążka)
+    \item Czas w zegarze (HH:MM:SS)
+    \item Dane z kamery (MIPI CSI-2 w rozdzielczości 1920x1080)
+    \item Dane z żyroskopu (przechowywane wartości: prędkość kątowa, oś X,Y,Z)
+\end{itemize}
+% ż
+
 \end{document}

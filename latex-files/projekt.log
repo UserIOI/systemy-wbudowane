@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.19)  11 JUN 2024 17:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.19)  11 JUN 2024 19:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -164,6 +164,9 @@ LaTeX Warning: Label `tab:tabela_pu' multiply defined.
 
 
 LaTeX Warning: Label `tab:tabela_pu' multiply defined.
+
+
+LaTeX Warning: Label `fig:example' multiply defined.
 
 )
 \openout1 = `projekt.aux'.
@@ -715,24 +718,30 @@ File: ../resources/diagramWbudowane.drawio.png Graphic file (type png)
 <use ../resources/diagramWbudowane.drawio.png>
 Package pdftex.def Info: ../resources/diagramWbudowane.drawio.png  used on input line 1001.
 (pdftex.def)             Requested size: 475.45825pt x 472.20029pt.
- [20 <../resources/diagramWbudowane.drawio.png>] (./projekt.aux)
+ [20 <../resources/diagramWbudowane.drawio.png>]
+<../resources/diagram_komponentow.png, id=76, 814.04124pt x 854.19125pt>
+File: ../resources/diagram_komponentow.png Graphic file (type png)
+<use ../resources/diagram_komponentow.png>
+Package pdftex.def Info: ../resources/diagram_komponentow.png  used on input line 1011.
+(pdftex.def)             Requested size: 475.45825pt x 498.91133pt.
+ [21 <../resources/diagram_komponentow.png>] [22] (./projekt.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2223 strings out of 476025
- 36219 string characters out of 5790016
+ 2230 strings out of 476025
+ 36489 string characters out of 5790016
  1867388 words of memory out of 5000000
- 22661 multiletter control sequences out of 15000+600000
+ 22667 multiletter control sequences out of 15000+600000
  523126 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,11n,62p,781b,382s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/pl/plti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on projekt.pdf (20 pages, 193538 bytes).
+Output written on projekt.pdf (22 pages, 250681 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 120 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
